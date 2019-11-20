@@ -1,21 +1,28 @@
 <template>
   <div class="app-wrapper">
     <!-- sidebar 侧边栏 -->
-    <sidebar class="sidebar-container" />
+    <Sidebar class="sidebar-container" />
     <!-- 右侧内容区域 -->
     <div class="main-container">
+      <div>
+        <!-- 头部 -->
+        <Navbar />
+        <tags-view />
+      </div>
       <router-view />
     </div>
   </div>
 </template>
 <script>
-import sidebar from './components/sidebar';
+import { Navbar, Sidebar, TagsView } from "./components";
 export default {
-  name: 'Layout',
+  name: "Layout",
   components: {
-    sidebar
+    Navbar,
+    Sidebar,
+    TagsView
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 @import "~@/styles/mixin.scss";

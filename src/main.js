@@ -5,7 +5,8 @@ import Element from "element-ui";
 import "./styles/element-variables.scss";
 import router from "./router";
 import "./styles/index.scss";
-// import "./permission";
+import "./icons";
+import "./permission";
 
 Vue.use(Element);
 
